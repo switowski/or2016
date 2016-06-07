@@ -1,0 +1,2 @@
+* Make sure the logs don't contain sensitive data
+* Put the apache logs and invenio log on the whole page

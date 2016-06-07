@@ -142,9 +142,73 @@ grep 'US' | wc -l
                     </p>
                 </section>
                 <section>
+                    <p>And that's just for access logs and errors.<br>
+                    To see how users are using our system we had to add 2 more systems on top of that.</p>
+                </section>
+                <section>
+                    <p>Piwik - to see statistics of our visitors</p>
+                    <img src="./img/piwik.png">
+                </section>
+                <section>
+                    <p>And Invenio webstat module - for custom statistics (like the number of loans in the library)</p>
+                    <img src="./img/webstat.png">
+                </section>
+                <section>
                     <p>
                         Oh, come on! There has to be a better way!
                     </p>
+                </section>
+                <section>
+                    <h5>Why do we need a clear overview of all the logs?</h5>
+                    <ul>
+                        <li>To know about errors before many users notice them :)</li>
+                        <li>To see how users are using CDS (are the new features popular?)</li>
+                        <li>To provide statistics for our users (<em> How many times my paper was downloaded ?</em>) and other services at CERN (<em>How many time this video was played?</em>)</li>
+                        <li>To see how many resources are used (CPU, RAM, etc.) and decide if it's time to scale up or not</li>
+                        <li>To be able to predict if we need to scale before incoming events (based on the historical data)</li>
+                    </ul>
+                </section>
+                <section>
+                    <p>
+                        We decided to switch to one system for all our logs.<br>
+                        Since the Elasticsearch was getting more and more popular, we decided to use it.<br>
+                    </p>
+                    <p>
+                        Elasticsearch is part of the ELK stack:
+                        <ul>
+                            <li>Elasticsearch - a search server</li>
+                            <li>Logstash - transportation layer</li>
+                            <li>Kibana - presentation layer</li>
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <p>Write how many machines we have used, how much data we store, what is the load and for long will it last?</p>
+                </section>
+                <section>
+                    <p>Write about custom improvements:
+                        <ul>
+                            <li>NGINX configuration instead of paid Shield</li>
+                            <li>Flagging bots</li>
+                            <li>Mapping IP to countries</li>
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <p>Describe Lumberjack - custom plugin that allows us to send data to Elasticsearch from any place in Invenio</p>
+                </section>
+                <section>
+                    <h4>Kibana</h4>
+                    <img src="./img/kibana.png">
+                </section>
+                <section>
+                    <p>Kibana works very nice for administrators, but we might need something more in the future (probably a module integrated directly in Invenio, with some predefined parameters and Role Based Access Control).</p>
+                </section>
+                <section>
+                    <h4>Conclusions:</h4>
+                    <ul>
+                        <li>If you are not happy with any part of ELK, you can easily replace it. There are many open source alternatives for each of it's part.</li>
+                    </ul>
                 </section>
             </div>
         </div>
@@ -156,6 +220,8 @@ grep 'US' | wc -l
             // More info https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
                 history: true,
+                slideNumber: 'c/t',
+                progress: true,
 
                 // More info https://github.com/hakimel/reveal.js#dependencies
                 dependencies: [
