@@ -63,7 +63,13 @@ body {
   font-size: 1.55em; }
 
 .reveal h4 {
+  font-size: 1.2em; }
+
+.reveal h5 {
   font-size: 1em; }
+
+.reveal h6 {
+  font-size: 0.8em; }
 
 .reveal h1 {
   text-shadow: none; }
@@ -230,9 +236,9 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #657b83;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
-
+  /*border: 4px solid #657b83;
+  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);*/
+}
 .reveal section img.plain {
   border: 0;
   box-shadow: none; }
